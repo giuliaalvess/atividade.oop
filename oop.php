@@ -2,6 +2,7 @@
 
 include_once './animal.php';
 
+/*
 $animal = new Animal();
 $animal->nome = 'Harry';
 $animal->especie = 'gato';
@@ -43,11 +44,29 @@ echo $cachorro->indicarPorte();
 echo $cachorro->socializar();
 echo $cachorro->iniciarAdestramento();
 echo $cachorro->resumoCachorro();
-
+*/
 
 include_once './gato.php';
+
+/*$objGato = new Gato();
+$objGato->nome = 'geleca';
+$objGato->idade = 3;
+$objGato->sexo = 'femea';
+$objGato->peso = 4;
+*/
+$objGato = new Gato ("Geleca", 6, "femea", 4,'curto',true);
+echo $objGato->exibirGato();
+
+
+
+/*
 $gato= new Gato();
 $gato->nome = 'rony';
+$gato->idade = 3;
+$gato->peso = 3;
+$gato->cor= 'laranja';
+$gato->status = 'adotado';
+$gato->chipado = 'sim';
 $gato->castrado = 'sim';
 $gato->pelagem = 'laranja';
 $gato->independente = 5;
@@ -63,8 +82,7 @@ echo $gato->atualizarIndependencia(10);
 echo $gato->vacinar();
 echo $gato->resumoGato();
 echo $gato->ensinarCaixaAreia();
-echo $gato->verificarContato();
-
+echo $gato->verificarContato();//
 
 include_once './adotante.php';
 $adotante = new Adotante();
@@ -86,5 +104,5 @@ echo $adotante->verificarOutrosAnimais();
 echo $adotante->resumoAdotante();
 echo $adotante->cancelarAdocao();
 
-
+*/
 ?>

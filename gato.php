@@ -1,6 +1,7 @@
 <?php
 include_once './animal.php';
 class Gato extends Animal{
+    
     public $nome;
     public $castrado;
     public $pelagem;
@@ -8,8 +9,26 @@ class Gato extends Animal{
     public $vacinado;
     public $curioso;
     public $adoraColo;
-    public $usaCaixaAreia;
+    public $usaCaixaAreia; 
 
+    public function __construct($nome, $idade, $sexo, $cor, $peso ,$pelagem, $castrado = false, $independente= 5 , $vacinado= false, $curioso= false, $adoraColo= false, $usaCaixaAreia= false) {
+        $this->nome = $nome;
+        $this->especie = "Gato";
+        $this->idade = $idade;
+        $this->sexo = $sexo ;
+        $this->peso = $peso ;
+        $this->cor = $cor ;
+        $this->status = "disponivel";
+        $this->chipado = false;
+        $this->pelagem = $pelagem;
+        $this->castrado = $castrado;
+        $this->independente = $independente;
+        $this->vacinado = $vacinado;
+        $this->curioso = $curioso;
+        $this->adoraColo = $adoraColo ;
+        $this->usaCaixaAreia = $usaCaixaAreia;
+    }
+    
     public function exibirGato():string{
         return "<br> <br>GATO <br>nome: {$this->nome}<br> castrado: {$this->castrado} <br> pelagem: {$this->pelagem}<br> independente: {$this->independente}<br> vacinado: {$this->vacinado}<br> curioso: {$this->curioso}<br> adora colo: {$this->adoraColo}<br> usa a caixa de areia: {$this->usaCaixaAreia}<br>";
     }
